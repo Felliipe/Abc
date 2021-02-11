@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: min(90%);
+    margin: auto;
+}
+
+#title, footer{
+    font-family: 'Bungee Inline', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+}
+
+#title1 {
+    font-family: 'Roboto Slab', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 24px;
+
+}
+
+.bv h2 {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+#title, #title1, .bv h2, footer, #like4{ 
+    color: white;
+
+    animation: up 1s;
+}
+
+#like1:hover, 
+#like2:hover, 
+#like3:hover {
+    background-color:rgb(100, 100, 100); 
+    border-radius: 23px;
+    animation: up .1s;
+}
+#like1:active, 
+#like2:active, 
+#like3:active {
+    animation: up 2s;
+    background-color: red;
+}
+
+
+
+#like1, 
+#like2, 
+#like3, 
+#like4 {
+    cursor: pointer;
+    background: none;
+    border: none;   
+}
+
+
+#input1,
+#input2,
+#input3,
+#input4 {
+    text-align: center;
+    width: 40px;
+    border: none;
+    pointer-events: none;
+    background: transparent;
+
+    font-family: 'Roboto Slab', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+
+    color: white;
+
+    animation: up 1s;
+}
+
+.part1, .part2, .part3 {
+    display: contents;
+}
+
+.img1, .img2, .img3 {
+    position: relative;
+    border-radius: 17px;
+    padding: 10px;
+    width: 280px;
+    height: 170px;
+}
+.img1 {
+    animation: up 2s;
+}
+
+.img2 {
+    animation: up 6s;
+}
+
+.img3 {
+    animation: up 12s;
+}
+
+.imgs{
+    writing-mode: vertical-lr;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 32px 12px 30px 15px;
+
+    animation: up .1s;
+}
+
+.baixar {
+    width: 20px;
+
+    animation: up 3s;
+}
+
+footer {
+    position: relative;
+    top: 10px;
+
+    background: white;
+    animation: up 5s;
+
+    color: red;
+}
+
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 6;
+        transform: translateY(0);
+    }
+} 
+
+@keyframes like {
+    from {top: 0px;}
+    to {bottom: 100px;}
+} 
+
+@media only screen and (max-width: 741px) {
+    footer {
+        top: 100px;
+    }
+
+    .imgs{ 
+        writing-mode: horizontal-tb;
+    }
+
+
+}
+/*
+body {
+    background:rgba(6, 65, 183, 1);
+}
+
+#title {
+    font-family: 'Bungee Inline', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.bv {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+#title1 {
+    font-family: 'Roboto Slab', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 24px;
+}
+
+.bv h2 {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 45px;
+}
+
+.barra {
+    width: 43px;
+    position: relative;
+    left: 94%;
+}
+
+#like1, 
+#like2, 
+#like3, 
+#like4 {
+    cursor: pointer;
+    background: none;
+    border: none;   
+}
+
+#input1,
+#input2,
+#input3,
+#input4 {
+    text-align: center;
+    width: 40px;
+    border: none;
+    pointer-events: none;
+    background: transparent;
+
+    font-family: 'Roboto Slab', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+
+    color: white;
+}
+
+.imgs {
+    text-align: center;
+}
+.img1, .img2, .img3 {
+    border-radius: 17px;
+    position: relative;
+    top: 60px;
+    padding: 10px;
+    width: 229px;
+    height: 125px;
+    animation-delay: 200ms;
+    animation: up 3s;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 160px;
+}
+
+
+@keyframes like {
+    from {bottom: 0px;}
+    to {bottom: 100px;}
+} 
+#like1:active,
+#like2:active,
+#like3:active,
+#like4:active{
+    position: relative;
+    animation: like 1s 1 alternate;
+    animation-direction: initial;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}  */
